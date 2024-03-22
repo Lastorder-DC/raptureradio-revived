@@ -14,7 +14,7 @@
       <br>
       <iframe id="radio_frame" scrolling="no" src="radio_stats.html" frameborder="0"></iframe>
       <div id="radio_loader">
-        <audio id="radio_player" autoplay="autoplay">
+        <audio id="radio_mp3" autoplay="autoplay">
           <source src="https://station.raptureradio.cc/proxy/raptureradio/stream" type="audio/mp3">Your browser does not support the audio element.
         </audio>
       </div>
@@ -34,7 +34,7 @@
     <div id="radio_glass"></div>
     <div id="on_Button">
       <div>
-        <a href="#" OnClick='javascript:self.location.href="radioOFF.html"; return false;'" title=" Turn Radio Off" target="_self" id="on">
+        <a href="#" OnClick='document.getElementById("radio_mp3").play(); return false;'" title=" Turn Radio On" target="_self" id="on">
           <span>On/Off</span>
         </a>
       </div>
