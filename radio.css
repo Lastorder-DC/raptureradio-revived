@@ -1,0 +1,146 @@
+/****************************************
+*	CSS STYLESHEET INFORMATION      *
+*	 Style: Rapture Radio           *
+*	  Type: Global                  *
+*	  Date: 2010-2011               *
+*	Author: Oleg Petrov             *
+****************************************/
+
+
+/****************************************
+*               GLOBAL                  *
+****************************************/
+
+a         { outline: none; }
+a:link	  { color: #a89f86; text-decoration: none; }
+a:visited { color: #a89f86; text-decoration: none; }
+a:hover	  { color: #FFFFFF; text-decoration: none; }
+a:active  { color: #a89f86; text-decoration: none; }
+img    	  { border: none;  margin-left: 0px;}
+textarea  { resize: none;}
+input  	  { outline: none; }
+:focus    { outline: none; }
+
+/****************************************
+*             FRAMEWORK                 *
+****************************************/
+
+body, html {  
+	margin-left: 0;
+	margin-top: 0;
+    	margin-right: 0;
+	margin-bottom: 0;				
+	color: #89A4FF;
+	background-color: #000000;
+	overflow: hidden;}
+
+/****************************************
+*            RAPTURE RADIO              *
+****************************************/
+
+@font-face {
+	font-family: ARCADECLASSIC;
+	src: url('ARCADECLASSIC.TTF');}
+
+#radio_loader object { filter: alpha(opacity=0.1); -moz-opacity: 0.1; opacity: 0.1; height: 1px; width: 1px;}
+#radio_frame 	 { width: 382px; height: 24px;}	
+#radio_header 	 { font-family: ARCADECLASSIC; text-align: center; font-weight: bold;}
+#radio_player 	 { position: absolute; left: 116px; top: 183px; width: 382px; height:  24px;  z-index: 1;}
+#radio_status 	 { position: absolute; left: 116px; top: 183px; width: 100px; height:  32px;  z-index: 2;}	
+#radio_listeners { position: absolute; left: 450px; top: 183px; width:  48px; height:  32px;  z-index: 2;}	
+#radio_glass 	 { position: absolute; left: 116px; top: 183px; width: 382px; height: 103px;  z-index: 3; background: url("https://www.rapturearchives.org/radio/img/radio_glass.png");} /*height 38*/
+#radio_bg        { width:614px; height:523px; background: url("https://www.rapturearchives.org/radio/img/radio.jpg");}
+
+.radio_stream {
+	font-family: ARCADECLASSIC;
+	font-weight: bold;
+	color: #89A4FF;
+	width: 382px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	background-color: #000000;}
+
+.status {
+	font-family: ARCADECLASSIC;
+	margin-left: 10px;
+	font-weight: bold;}
+
+.listen {
+	font-family: ARCADECLASSIC;
+	text-align: right;
+	margin-right: 10px;
+	font-weight: bold;}
+
+.radio_player {
+	width: 382px;
+	height: 24px;
+	margin-top:-110px;
+	margin-bottom: 0px;
+	position:fixed;
+	visibility: hidden;}
+
+/*------------RADIO BUTTON LAYERS------------------*/
+
+#off_Button    { position: absolute; left: 158px; top: 437px; width: 35px; height: 35px; z-index: 1;}
+#on_Button     { position: absolute; left: 158px; top: 437px; width: 35px; height: 35px; z-index: 1;}
+#help_Button   { position: absolute; left: 210px; top: 437px; width: 35px; height: 35px; z-index: 1;}
+#web_Button    { position: absolute; left: 369px; top: 437px; width: 35px; height: 35px; z-index: 1;}
+#report_Button { position: absolute; left: 421px; top: 437px; width: 35px; height: 35px; z-index: 1;}
+
+/*------------RADIO BUTTON ROLLOVERS---------------*/
+
+#on           { display: block; width: 35px; height: 35px; background: url("https://www.rapturearchives.org/radio/img/radio_buttons.png") no-repeat 0 0;}
+#on:hover     { background-position: 0 -35px;}
+#on span      { display: none;}
+
+#help         { display: block; width: 35px; height: 35px; background: url("https://www.rapturearchives.org/radio/img/radio_buttons.png"); background-position: -35px 0px;}
+#help:hover   { background-position: -35 -35px;}
+#help span    { display: none;}
+
+#web          { display: block; width: 35px; height: 35px; background: url("https://www.rapturearchives.org/radio/img/radio_buttons.png"); background-position: -70px 0px;}
+#web:hover    { background-position: -70 -35px;}
+#web span     { display: none;}
+
+#report       { display: block; width: 35px; height: 35px; background: url("https://www.rapturearchives.org/radio/img/radio_buttons.png"); background-position: -105px 0px;}
+#report:hover { background-position: -105 -35px;}
+#report span  { display: none;}
+
+#off          { display: block; width: 35px; height: 35px; background: url("https://www.rapturearchives.org/radio/img/radio_buttons.png"); background-position: -140px 0px;}
+#off:hover    { background-position: -140 -35px;}
+#off span     { display: none;}
+
+/****************************************
+*            Report Form                *
+****************************************/
+
+
+#report_size   { width: 850px; height: 300px;}
+#report_bg     { width: 850px; height: 291px; background: url("https://www.rapturearchives.org/radio/report/img/report_bg.jpg");}
+#report_header { width: 850px; height: 296px; background: url("https://www.rapturearchives.org/radio/report/img/report_header.jpg");}
+#report_footer { width: 850px; height:  50px; background: url("https://www.rapturearchives.org/radio/report/img/report_footer.jpg");}
+
+.contact_form {
+	color: #000000;
+	font-weight:bold;  
+	border: 0px solid #000000; 
+	background-color: transparent;
+	Overflow-y:hidden;}
+
+.contact_button {
+	color: #000000;
+	font-weight:bold; 
+	border: 1px solid #000000; 
+	background-color: transparent;}
+
+.hide {
+	display: none;}
+
+.label {
+	color: #000000;
+	font-weight:bold;}
+
+.name-margin {
+	margin-left: 20px;
+	color: #000000;
+	font-weight:bold;}
