@@ -14,7 +14,7 @@
       <br>
       <iframe id="radio_frame" scrolling="no" src="radio_stats.html" frameborder="0"></iframe>
       <div id="radio_loader">
-        <audio id="radio_mp3" autoplay="autoplay">
+        <audio id="radio_mp3" autoplay="autoplay" onerror="document.getElementById('cc_strinfo_server_raptureradio').innerText = 'OFFLINE'">
           <source src="https://station.raptureradio.cc/listen/radio/radio.mp3" type="audio/mp3">Your browser does not support the audio element.
         </audio>
       </div>
