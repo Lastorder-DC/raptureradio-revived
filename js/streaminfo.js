@@ -97,6 +97,7 @@ window.centovacast.loader = window.centovacast.loader || {
 window.centovacast.loader.init();
 
 window.centovacast.loader.add("streaminfo", function ($) {
+    window.centovacast.streaminfo.settings = window.centovacast.streaminfo.settings || {};
     $.extend(window.centovacast.streaminfo.settings, window.centovacast.options.streaminfo);
     if (!window.centovacast.streaminfo.settings.manual) {
         window.centovacast.streaminfo.run();
