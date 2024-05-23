@@ -74,7 +74,7 @@ window.centovacast.loader = window.centovacast.loader || {
         this.url = src.replace(/(\.(?:[a-z]{2,}|[0-9]+)(:[0-9]+)?\/).*$/i, "$1");
         this.external_jquery = typeof jQuery !== "undefined";
         if (!this.external_jquery) {
-            this.load_script(this.url + "system/jquery.min.js");
+            this.load_script(this.url + "js/jquery-3.7.1.min.js");
         }
         this.check();
     },
