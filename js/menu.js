@@ -40,7 +40,7 @@ function MaxLength(field, maxLength)
 
 function newRadio(url) 
 {
-	radioLoad = window.open('https://www.rapturearchives.org/radio/' + url,'radioLoad','height=523,width=614,left=0,top=0,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=no')
+	radioLoad = window.open('https://raptureradio.cc/' + url,'radioLoad','height=523,width=614,left=0,top=0,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=no')
 }
 
 function newGuide(url) 
