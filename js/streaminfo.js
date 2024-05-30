@@ -1,26 +1,30 @@
-$(document).ready(function() {
-    const apiUrl = "https://station.raptureradio.cc/api/nowplaying/radio";
+const apiUrl = "https://station.raptureradio.cc/api/nowplaying/radio";
+
+document.addEventListener("DOMContentLoaded", function() {
     window.currentSong = "";
 
-    function updateStreamInfo(data) {
+    async function updateStreamInfo(data) {
         if (!data) return;
 
         const nowPlayingTitle = data.now_playing.song.text;
         const currentListenersCount = data.listeners.current;
-        if(window.currentSong != nowPlayingTitle) {
+        if(window.currentSong !== nowPlayingTitle) {
             window.currentSong = nowPlayingTitle;
-            $('#cc_strinfo_song_raptureradio').html(nowPlayingTitle);
+            document.getElementById('cc_strinfo_song_raptureradio').innerHTML = nowPlayingTitle;
         }
-        $('#cc_strinfo_listeners_raptureradio').html(currentListenersCount);
+        document.getElementById('cc_strinfo_listeners_raptureradio').innerHTML = currentListenersCount;
     }
 
-    function fetchStreamInfo() {
-        $.getJSON(apiUrl, function(data) {
+    async function fetchStreamInfo() {
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
             updateStreamInfo(data);
-        });
+        } catch (error) {
+            console.error('Error fetching stream info:', error);
+        }
     }
 
-    // 주기적으로 API 데이터 갱신
     setInterval(fetchStreamInfo, 1500);
-    fetchStreamInfo(); // 페이지 로드 시 초기 데이터 가져오기
+    fetchStreamInfo();
 });
