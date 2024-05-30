@@ -3,8 +3,10 @@
   <head>
     <title>Rapture Radio - A Public Service By Ryan Industries</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/css/radio.css?v=5" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/js/menu.js?v=4"></script>
+    <link href="/css/radio.css?v=6" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/menu.js?v=4" defer></script>
+    <script type="text/javascript" src="/js/streaminfo.js?v=4" defer></script>
+    <script type="text/javascript" src="/js/analytics.js?v=1" defer></script>
   </head>
   <body>
     <div id="radio_player">
@@ -14,7 +16,7 @@
       <br>
       <iframe id="radio_frame" scrolling="no" src="radio_stats.html?v=1" frameborder="0"></iframe>
       <div id="radio_loader">
-        <audio id="radio_mp3" autoplay="autoplay" onerror="document.getElementById('cc_strinfo_server_raptureradio').innerText = 'OFFLINE'">
+        <audio id="radio_mp3" autoplay onerror="document.getElementById('cc_strinfo_server_raptureradio').innerText = 'OFFLINE'">
           <source src="https://station.raptureradio.cc/listen/radio/radio.mp3" type="audio/mp3">Your browser does not support the audio element.
         </audio>
       </div>
@@ -28,20 +30,20 @@
     <div id="radio_listeners">
       <div class="listen">
         <span id="cc_strinfo_listeners_raptureradio" class="cc_streaminfo">?</span>
-        <img src="https://www.rapturearchives.org/radio/img/listeners.jpg">
+        <img src="https://www.rapturearchives.org/radio/img/listeners.jpg" alt="Listeners">
       </div>
     </div>
     <div id="radio_glass"></div>
     <div id="on_Button">
       <div>
-        <a href="#" OnClick='document.getElementById("radio_mp3").play(); return false;'" title=" Turn Radio On" target="_self" id="on">
+        <a href="#" onclick='document.getElementById("radio_mp3").play(); return false;' title="Turn Radio On" target="_self" id="on">
           <span>On/Off</span>
         </a>
       </div>
     </div>
     <div id="help_Button">
       <div>
-        <a href="#" OnClick="newGuide('guide.php'); return false;" title="View User Guide" target="_blank" id="help">
+        <a href="#" onclick="newGuide('guide.php'); return false;" title="View User Guide" target="_blank" id="help">
           <span>Guide</span>
         </a>
       </div>
@@ -60,7 +62,5 @@
         </a>
       </div>
     </div>
-    <script language="javascript" type="text/javascript" src="/js/streaminfo.js?v=4"></script>
-    <SCRIPT language="JavaScript" SRC="/js/analytics.js?v=1" TYPE="text/JavaScript"></SCRIPT>
   </body>
-</html>
+</HTML>
