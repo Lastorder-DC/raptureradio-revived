@@ -231,7 +231,7 @@ html {
     display: block;
     width: 35px;
     height: 35px;
-    background: url("/images/radio_buttons.png") no-repeat 0 0;
+    background: url("/images/radio_buttons.png?v=2") no-repeat 0 0;
 }
 
 #on:hover {
@@ -246,7 +246,7 @@ html {
     display: block;
     width: 35px;
     height: 35px;
-    background: url("/images/radio_buttons.png");
+    background: url("/images/radio_buttons.png?v=2");
     background-position: -35px 0px;
 }
 
@@ -262,7 +262,7 @@ html {
     display: block;
     width: 35px;
     height: 35px;
-    background: url("/images/radio_buttons.png");
+    background: url("/images/radio_buttons.png?v=2");
     background-position: -70px 0px;
 }
 
@@ -278,7 +278,7 @@ html {
     display: block;
     width: 35px;
     height: 35px;
-    background: url("/images/radio_buttons.png");
+    background: url("/images/radio_buttons.png?v=2");
     background-position: -105px 0px;
 }
 
@@ -294,7 +294,7 @@ html {
     display: block;
     width: 35px;
     height: 35px;
-    background: url("/images/radio_buttons.png");
+    background: url("/images/radio_buttons.png?v=2");
     background-position: -140px 0px;
 }
 
