@@ -1,23 +1,32 @@
 const apiUrl = "https://station.raptureradio.cc/api/nowplaying/radio";
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     window.currentSong = "";
+
+    const songElement = document.getElementById('cc_strinfo_song_raptureradio');
+    const listenersElement = document.getElementById('cc_strinfo_listeners_raptureradio');
 
     async function updateStreamInfo(data) {
         if (!data) return;
 
-        const nowPlayingTitle = data.now_playing.song.text;
-        const currentListenersCount = data.listeners.current;
-        if(window.currentSong !== nowPlayingTitle) {
+        const { text: nowPlayingTitle } = data.now_playing.song;
+        const { current: currentListenersCount } = data.listeners;
+
+        if (window.currentSong !== nowPlayingTitle) {
             window.currentSong = nowPlayingTitle;
-            document.getElementById('cc_strinfo_song_raptureradio').innerHTML = nowPlayingTitle;
+            if (songElement) {
+                songElement.innerHTML = nowPlayingTitle;
+            }
         }
-        document.getElementById('cc_strinfo_listeners_raptureradio').innerHTML = currentListenersCount;
+        if (listenersElement) {
+            listenersElement.innerHTML = currentListenersCount;
+        }
     }
 
     async function fetchStreamInfo() {
         try {
             const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
             updateStreamInfo(data);
         } catch (error) {
