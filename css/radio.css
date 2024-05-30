@@ -72,8 +72,11 @@ html {
 ****************************************/
 
 @font-face {
-    font-family: ARCADECLASSIC;
-    src: url('/font/ARCADECLASSIC.TTF');
+    font-family: 'Arcade Classic';
+    src: url('/font/ArcadeClassic.woff2') format('woff2'),
+        url('/font/ArcadeClassic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 #radio_loader object {
@@ -90,7 +93,7 @@ html {
 }
 
 #radio_header {
-    font-family: ARCADECLASSIC;
+    font-family: 'Arcade Classic';
     text-align: center;
     font-weight: bold;
 }
@@ -143,7 +146,7 @@ html {
 }
 
 .radio_stream {
-    font-family: ARCADECLASSIC;
+    font-family: 'Arcade Classic';
     font-weight: bold;
     color: #89A4FF;
     width: 382px;
@@ -154,13 +157,13 @@ html {
 }
 
 .status {
-    font-family: ARCADECLASSIC;
+    font-family: 'Arcade Classic';
     margin-left: 10px;
     font-weight: bold;
 }
 
 .listen {
-    font-family: ARCADECLASSIC;
+    font-family: 'Arcade Classic';
     text-align: right;
     margin-right: 10px;
     font-weight: bold;
