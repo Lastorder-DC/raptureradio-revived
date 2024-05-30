@@ -73,7 +73,7 @@ html {
 
 @font-face {
     font-family: ARCADECLASSIC;
-    src: url('ARCADECLASSIC.TTF');
+    src: url('/font/ARCADECLASSIC.TTF');
 }
 
 #radio_loader object {
